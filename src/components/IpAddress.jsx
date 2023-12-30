@@ -10,10 +10,7 @@ const IpAddress = ({ onIpInfoChange }) => {
       const response = await axios.get(`https://geo.ipify.org/api/v2/country?apiKey=at_ShgXbQt8FbEd0qXYHS7sRDgIK4VDR&ipAddress=${ipAddress}`);
       const ipInfo = response.data;
   
-      // Log the response to check if it contains the expected data
       console.log('IP Info Response:', ipInfo);
-  
-      // Pass the IP info to the parent component
       if (onIpInfoChange) {
         onIpInfoChange(ipInfo);
       }
@@ -29,13 +26,13 @@ const IpAddress = ({ onIpInfoChange }) => {
   };
 
   return (
-    <div className='flex justify-center self-center mb-7'>
+    <div className='flex justify-center self-center lg:w-1/2 mb-24 lg:mb-28'>
       <input
         type="text"
         value={ipAddress}
         onChange={handleInputChange}
         className='p-4 rounded-l-xl text-xl w-full outline-none'
-        placeholder="Enter IP Address"
+        placeholder="Search for any IP Address or domain"
       />
       <button
         onClick={handleSearch}
