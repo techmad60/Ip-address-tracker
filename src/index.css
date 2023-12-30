@@ -4,14 +4,16 @@
     height: 100vh;
 }
 .loading-spinner {
+    display: flex;
+    justify-self: center;
+    align-self: center;
     border: 8px solid #f3f3f3; /* Light gray border */
     border-top: 8px solid #3498db; /* Blue border on top */
     border-radius: 50%;
     width: 50px;
     height: 50px;
     animation: spin 1s linear infinite; /* Animation named 'spin', 1 second duration, linear timing, infinite loop */
-    margin: auto; /* Center the spinner */
-    background-color: rgba(255, 255, 255, 0);
+    margin: auto;
   }
   
   @keyframes spin {
